@@ -19,10 +19,10 @@ INSERT INTO [dbo].[Books] ([Id], [Tittle], [Discription], [Price], [AuthorId]) V
 INSERT INTO [dbo].[Books] ([Id], [Tittle], [Discription], [Price], [AuthorId]) VALUES (4, N'The old man and the Sea ', N'It is a short novel, written in 1951.', CAST(25.00 AS Decimal(18, 2)), 4)
 INSERT INTO [dbo].[Books] ([Id], [Tittle], [Discription], [Price], [AuthorId]) VALUES (5, N'A Promised Land', N'A famous novel', CAST(15.00 AS Decimal(18, 2)), 5)
 SET IDENTITY_INSERT [dbo].[Books] OFF
-SET IDENTITY_INSERT [dbo].[Publication] ON
-INSERT INTO [dbo].[Publication] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (1, N'6', 1, 1)
-INSERT INTO [dbo].[Publication] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (2, N'20', 2, 2)
-INSERT INTO [dbo].[Publication] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (3, N'50', 4, 5)
-INSERT INTO [dbo].[Publication] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (4, N'60', 5, 3)
-INSERT INTO [dbo].[Publication] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (5, N'78', 3, 4)
-SET IDENTITY_INSERT [dbo].[Publication] OFF
+SET IDENTITY_INSERT [dbo].[Publications] ON
+INSERT INTO [dbo].[Publications] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (1, N'6', 1, 1)
+INSERT INTO [dbo].[Publications] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (2, N'20', 2, 2)
+INSERT INTO [dbo].[Publications] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (3, N'50', 4, 5)
+INSERT INTO [dbo].[Publications] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (4, N'60', 5, 3)
+INSERT INTO [dbo].[Publications] ([Id], [Books_Copies], [Publisher_detailId], [Books_detailId]) VALUES (5, N'78', 3, 4)
+SET IDENTITY_INSERT [dbo].[Publications] OFF
