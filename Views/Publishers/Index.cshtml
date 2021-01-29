@@ -5,8 +5,9 @@
 }
 <body>
     <div class="text-center">
+        <!--code to keep the heading in the center-->
         <header>
-            <!--z-index code to display image on the Author page behind the text-->
+            <!--z-index code to display image on the Publishers page behind the text-->
             <style>
                 img {
                     position: absolute;
@@ -22,7 +23,9 @@
         </header>
 
         <img src="~/Images/book 3.jpg" />
-        <h1>Index</h1>
+
+        <!--code to increse the size of heading and to change its color also to bold it-->
+        <h1 class="display-4"><b><p style="color:brown;"> PUBLISHERS' DATA</b></h1></p>
 
         <p>
             <a asp-action="Create">Create New</a>
@@ -31,18 +34,28 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Publisher_Name)
+                        <!--code to display the details of Publisher like, publisher name,Mobile number and email id-->
+                        <!--code to bold the text-->
+                        <b>
+                            Publisher Name<!--code to remove the underscore from Publisher name to make it look nice-->
+                        </b>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Mobile_Number)
-                    </th>
+                        <b>
+                            <!--code to bold the text-->
+                            Mobile Number<!--code to remove the underscore from Mobile number to make it look nice-->
+                        </b>
+</th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Email_Id)
+                        <b>
+                    <!--code to bold the text-->
+                     Email Id<!--code to remove the underscore from Email.Id to make it look nice-->
+</b>
                     </th>
                     <th></th>
                 </tr>
             </thead>
-            </body>
+</body>
 
             <body>
                 @foreach (var item in Model)

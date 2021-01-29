@@ -5,8 +5,9 @@
 }
 <body>
     <div class="text-center">
+        <!--code to keep the heading in the center-->
         <header>
-            <!--z-index code to display image on the Author page behind the text-->
+            <!--z-index code to display image on the Publication page behind the text-->
             <style>
                 img {
                     position: absolute;
@@ -22,7 +23,9 @@
         </header>
 
         <img src="~/Images/book 3.jpg" />
-        <h1>Index</h1>
+
+        <!--code to increse the size of heading and to change its color, also to make it bold-->
+        <h1 class="display-4"><b><p style="color:brown;">PUBLICATIONS' DATA</b></p></h1>
 
         <p>
             <a asp-action="Create">Create New</a>
@@ -31,19 +34,31 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Books_Copies)
+                        <!--code to display the details of publications like Books copies, publisher detail and books details-->
+                        <!--code to bold the text-->
+                        <b>
+                            Books Copies
+                        </b><!--code to remove the underscore from Books copies to make it look nice-->
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Publisher_detail)
+                        <!--code to bold the text-->
+                        <b>
+                            Publisher detail
+                        </b><!--code to remove the underscore from Publisher details to make it look nice-->
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Books_detail)
+
+                        <!--code to bold the text-->
+                        <b>
+
+                            Books detail
+                        </b><!--code to remove the underscore from Books detail to make it look nice-->
                     </th>
                     <th></th>
                 </tr>
             </thead>
-         
-        </body>
+
+</body>
             <body>
                 @foreach (var item in Model)
                 {

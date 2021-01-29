@@ -6,7 +6,7 @@
 <body>
     <div class="text-center">
         <header>
-            <!--z-index code to display image on the Author page behind the text-->
+            <!--z-index code to display image on the Books page behind the text-->
             <style>
                 img {
                     position: absolute;
@@ -22,7 +22,9 @@
         </header>
 
         <img src="~/Images/book 3.jpg" />
-        <h1>Index</h1>
+
+        <!--code to increse the size of heading and to change its color, also to bold it-->
+        <h1 class="display-4"><b><p style="color:saddlebrown;">BOOKS' DATA</b></h1></p>
 
         <p>
             <a asp-action="Create">Create New</a>
@@ -31,16 +33,29 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Tittle)
+                        <!--code to display the details of books like its tittle, discription, price, author-->
+                        <!--code to bold the text-->
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Tittle)</b>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Discription)
+                        <!--code to bold the text-->
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Discription)</b>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Price)
+                        <!--code to bold the text-->
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Price)</b>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Author)
+                        <!--code to bold the text-->
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Author)</b>
                     </th>
                     <th></th>
                 </tr>
@@ -48,9 +63,9 @@
 
             <body>
                 @foreach (var item in Model)
-             
+
                 {
-                   <tr> 
+                    <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Tittle)
                         </td>
@@ -71,5 +86,5 @@
                     </tr>
                 }
             </body>
-            </body>
+</body>
         </table>
