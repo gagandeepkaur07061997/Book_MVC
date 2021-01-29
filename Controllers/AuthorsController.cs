@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Book_MVC.Data;
 using Book_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Book_MVC.Controllers
 {
@@ -24,7 +25,7 @@ namespace Book_MVC.Controllers
         {
             return View(await _context.Authors.ToListAsync());
         }
-
+        
         // GET: Authors/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -42,7 +43,7 @@ namespace Book_MVC.Controllers
 
             return View(authors);
         }
-
+        [Authorize]
         // GET: Authors/Create
         public IActionResult Create()
         {
@@ -64,7 +65,7 @@ namespace Book_MVC.Controllers
             }
             return View(authors);
         }
-
+        [Authorize]
         // GET: Authors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -115,7 +116,7 @@ namespace Book_MVC.Controllers
             }
             return View(authors);
         }
-
+        [Authorize]
         // GET: Authors/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
